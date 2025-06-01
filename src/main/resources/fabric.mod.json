@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "anotherworldborder",
+  "version": "${version}",
+  "name": "another-world-border",
+  "description": "Another world border using particle simulation",
+  "authors": [
+    "Noryea"
+  ],
+  "contact": {},
+  "license": "GPL-3.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.noryea.anotherworldborder.AnotherWorldBorder"
+    ]
+  },
+  "mixins": [
+    "anotherworldborder.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*"
+  }
+}
