@@ -18,17 +18,10 @@ public class AnotherWorldBorder implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        LOGGER.info("Initializing AnotherWorldBorder mod");
-
         // 初始化配置
         config = new ModConfig();
         config.load();
-
-        // 注册命令
-        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
-                AnotherWorldBorderCommand.register(dispatcher));
-
-        // 注册Tick事件
+        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> AnotherWorldBorderCommand.register(dispatcher));
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             // 处理每个世界的边界
             server.getWorlds().forEach(world -> {
